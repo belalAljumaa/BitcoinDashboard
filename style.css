@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fd;
+  color: #2d3436;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Start Sidebar */
+.sidebar {
+  background-color: #0d40c6;
+  width: 80px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 75px;
+}
+
+.sidebar .nav a {
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+/* End Sidebar */
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header .logo img {
+  mix-blend-mode: multiply;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info .wallet {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.user-info .btc {
+  background-color: #eff4ff;
+  color: #1652f0;
+  border: 1px solid #dae3ff;
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+}
+
+.user-info .usd {
+  border: 1px solid #ddd;
+  color: #aaa;
+  border-radius: 0 10px 10px 0;
+  padding: 10px;
+  margin-left: -5px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.profile i:first-of-type {
+  background-color: #1652f0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+/* End Header */
+
+.welcome-text {
+  margin-bottom: 75px;
+  font-size: 24px;
+  color: #1652f0;
+}
+
+.welcome-text span {
+  color: #aaa;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-left: 50px;
+}
+
+/* Start Exchange Section */
+.exchange {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.exchange-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.exchange-toggle button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #1652f0;
+}
+
+.exchange-toggle .active {
+  background-color: #1652f0;
+  color: #fff;
+}
+
+.exchange-field {
+  margin-bottom: 15px;
+}
+
+.exchange-field label {
+  font-size: 14px;
+  color: gray;
+}
+
+.field-value {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: #f2f6fe;
+  padding: 10px;
+}
+
+select {
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.monthly-limit {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
+}
+
+.monthly-limit span:first-of-type {
+  color: #aaa;
+}
+
+.exchange-now {
+  width: 100%;
+  padding: 12px;
+  background-color: #10d876;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0 50px 0;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #777;
+}
+/* End Exchange Section */
+
+/* Start Summary Section */
+.summary {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user.seller {
+  text-align: end;
+}
+
+.user img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.user div h4 {
+  font-size: 14px;
+  color: gray;
+}
+
+.user div h5 {
+  font-size: 16px;
+}
+
+.user div p {
+  color: #1652f0;
+}
+
+.summary-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-boxes .box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f6fe;
+}
+
+.summary-boxes .box:first-child {
+  color: #1652f0;
+}
+
+.vat {
+  color: #c0392b;
+  font-weight: bold;
+}
+/* End Summary Section */
+
+/* Animation: fade in from bottom */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exchange,
+.summary {
+  animation: fadeInUp 0.8s ease forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.exchange-toggle button:hover,
+.exchange-now:hover {
+  opacity: 0.9;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Tablets and smaller */
+@media (max-width: 991px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 767px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .sidebar .nav ul {
+    flex-direction: row-reverse;
+    gap: 15px;
+    margin-top: 0;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-text {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exchange,
+  .summary {
+    padding: 15px;
+  }
+
+  .users {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .user {
+    flex-direction: row;
+  }
+
+  .seller {
+    flex-direction: row-reverse;
+    text-align: start !important;
+  }
+
+  .summary-boxes .box {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .exchange-toggle {
+    flex-direction: column;
+  }
+
+  .exchange-toggle button {
+    width: 100%;
+  }
+
+  .field-value {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  .field-value select,
+  .field-value span {
+    width: 100%;
+  }
+
+  .monthly-limit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
