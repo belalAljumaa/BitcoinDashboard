@@ -163,6 +163,7 @@ body {
 .field-value {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
   background-color: #f2f6fe;
   padding: 10px;
